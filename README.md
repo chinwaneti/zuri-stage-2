@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# MovieHub - Movie Discovery Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MovieHub is a responsive web application that allows users to search for movies, view movie details, and like their favorite movies. It leverages the TMDB API to provide movie data.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [API Integration](#api-integration)
+- [Error Handling](#error-handling)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **User Interface:**
+   - Displays the top 10 movies on the homepage in a grid layout with movie posters.
+   - Each movie card displays the movie title and release date.
+   
+2. **Movie Search:**
+   - Allows users to search for movies by title.
+   - Displays search results including movie posters, titles, and release dates.
+   - Shows a loading indicator while fetching search results.
 
-### `npm test`
+3. **Movie Details:**
+   - Users can view detailed information about a movie by navigating to the `/movies/:id` route.
+   - Movie details include:
+     - Title
+     - Release date (in UTC)
+     - Runtime (in minutes)
+     - Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- React 
+- Axios (for API requests)
+- React Router (for routing)
+- [TMDB API](https://www.themoviedb.org/documentation/api)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these instructions to set up and run MovieHub locally:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chinwaneti/zuri-stage-2
+   ```
 
-### `npm run eject`
+2. Change into the project directory:
+   ```bash
+   cd moviehub
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Create a `.env` file in the project root directory and add your TMDB API key:
+   ```env
+   REACT_APP_TMDB_API_KEY=your-api-key
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+6. Open your web browser and visit `http://localhost:3000` to see the app in action.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Homepage:**
+  - The homepage lists the top 10 movies with their posters, titles, and release dates.
+  
+- **Movie Search:**
+  - Use the search bar in the header to search for movies by title.
+  - The search results will display movie posters, titles, and release dates.
+  
+- **Movie Details:**
+  - Click on a movie card on the homepage to view detailed information about a movie.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Integration
 
-### Code Splitting
+MovieHub uses the TMDB API to fetch movie data. It makes use of the following API endpoint to fetch movie details by ID:
+- [TMDB Movie Details API](https://api.themoviedb.org/3/movie/{movie_id})
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Error Handling
 
-### Analyzing the Bundle Size
+The application implements error handling to display meaningful error messages to users in case of API failures or other issues.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+Contributions to MovieHub are welcome! Feel free to open issues and pull requests for any improvements or bug fixes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
