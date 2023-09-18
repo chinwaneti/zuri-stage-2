@@ -5,6 +5,7 @@ import { GrFormNext } from 'react-icons/gr';
 import { Link } from 'react-router-dom'; // Import Link
 import axios from 'axios';
 import Nav from './Nav';
+import Footer from './Footer';
 
 // Function to fetch movie data from TMDB API
 async function fetchMovieData() {
@@ -162,6 +163,9 @@ function MovieList() {
         ))}
       </section>
       <div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
