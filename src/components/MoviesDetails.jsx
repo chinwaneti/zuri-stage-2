@@ -55,7 +55,7 @@ export default function MoviesDetails() {
   const releaseDate = new Date(details.release_date).toUTCString();
 
   return (
-    <div className="flex md:flex-row rounded-md md:w-full items-center md:items-start">
+    <div className="flex md:flex-row rounded-md md:w-full w-[70%] items-center md:items-start">
       <div className="relative flex space-x-2 h-full md:px-6 px-2 py-3">
         <div className="hidden md:block">
           <div className="rounded-r-3xl h-full px-3 border-2 items-center">
