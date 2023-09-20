@@ -55,7 +55,7 @@ export default function MoviesDetails() {
   const releaseDate = new Date(details.release_date).toUTCString();
 
   return (
-    <div className="flex md:flex-row rounded-md md:w-full w-[70%] items-center md:items-start">
+    <div className="flex md:flex-row rounded-md md:w-full items-center md:items-start">
       <div className="relative flex space-x-2 h-full md:px-6 px-2 py-3">
         <div className="hidden md:block">
           <div className="rounded-r-3xl h-full px-3 border-2 items-center">
@@ -92,14 +92,14 @@ export default function MoviesDetails() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full">
+        <div className="md:w-full md:h-full">
           {showVideo ? (
             <iframe
               width="560"
               height="315"
               src={`https://www.youtube.com/embed/${details.videos.results[0].key}`}
               allowFullScreen
-              className="md:w-[100%] w-[100%] md:h-[70vh] h-[70vh] rounded-3xl md:ml-2 ml-0"
+              className="md:w-[100%] w-[70%] md:h-[70vh] h-[70vh] rounded-3xl md:ml-2 ml-0"
               title= {details.videos.results[0].name}
             ></iframe>
           ) : (
